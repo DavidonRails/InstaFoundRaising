@@ -1,0 +1,26 @@
+<ion-view class="serial_redeem_page" view-title="Redeem" hide-nav-bar="true">
+  <ion-header-bar>
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="goBack()">
+    </button>
+
+    <h1 class="title">Serial Redeem</h1>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <div class="list" style="margin-top: 150px;">
+      <label class="msg">{{msg}}</label>
+    </div>
+
+    <div class="list">
+        <span class="input-label">Serial Key</span>
+        <input type="text" class="redeem_code" ng-model="serial_number" placeholder="Enter Serial Key for New Card" value="" />
+    </div>
+
+    <br />
+
+    <div class="list">
+        <button class="button button-block button-positive"  ng-click="serial_redeem(serial_number)">Enter Serial</a>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view class="mycard_list_page" view-title="MyCard List" hide-nav-bar="true" >
+  <ion-header-bar>
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="goBack()">
+    </button>
+
+    <h1 class="title">My Cards</h1>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <div class="list">
+      <label class="msg">{{msg}}</label>
+    </div>
+
+    <div class="list">
+      <a ng-repeat="c in cards"
+        href="#/card/{{$index}}" class="item item-thumbnail-left">
+        <img ng-src="{{CARD_IMG_URL}}{{ c.filename }}">
+        <h2>{{ c.name }}</h2>
+        <p>{{c.description}}</p>
+        <P>/#/card/{{$index}}</P>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

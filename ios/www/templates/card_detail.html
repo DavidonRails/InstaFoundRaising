@@ -1,0 +1,31 @@
+<ion-view class="card_detail_page" view-title="Card Detail" hide-nav-bar="true" >
+  <ion-header-bar>
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="goBack()">
+    </button>
+
+    <h1 class="title">Card Detail</h1>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <div class="list card">
+
+      <div class="item positive">
+        <label for="card_name">Card Name :</label>
+        <h2 name="card_name">{{card.name}}</h2>
+        <br />
+        <label for="card_desc">Card Description :</label>
+        <p name="card_desc">{{card.description}}</p>
+      </div>
+
+      <div class="item item-image">
+        <img ng-src="{{CARD_IMG_URL}}{{ card.filename }}">
+      </div>
+
+      <a class="item item-icon-left positive" href="#">
+        <label>Expire Date :</label>
+        <i class="icon ion-calendar"></i>
+        {{card.expire_date}}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

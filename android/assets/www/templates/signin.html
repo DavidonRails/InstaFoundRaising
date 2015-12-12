@@ -1,0 +1,45 @@
+<ion-view class="signin_page" view-title="SignIn" hide-nav-bar="true">
+  <!--ion-header-bar>
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="goBack()">
+    </button>
+
+    <h1 class="title">Sign In</h1>
+  </ion-header-bar-->
+
+  <ion-content class="padding">
+    <div class="list logo">
+    </div>
+
+    <form name="loginForm" ng-submit="doLogin(loginData)">
+      <div class="list">
+        <h2>Login</h2>
+      </div>
+
+      <div class="list">
+        <label class="msg">{{msg}}</label>
+      </div>
+
+      <div class="list">
+          <span class="input-label">Username</span>
+          <input type="text"  ng-model="loginData.username" />
+
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password" />
+      </div>
+
+      <div class="list">
+        <div class="col-50">
+          <button class="button button-block button-positive" type="submit">Sign In</button>
+        </div>
+
+        <div class="col-50">
+          <a class="button button-block button-positive" href="#/signup">Sign Up</a>
+        </div>
+      </div>
+      <br />
+      <!--div class="list">
+          <a class="link_forgotpass" href="#/forgotpassword">Forgot Password</a>
+      </div-->
+    </form>
+  </ion-content>
+</ion-view>
